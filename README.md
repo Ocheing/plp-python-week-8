@@ -205,7 +205,23 @@ Key Objectives You May Have Achieved:
 ✅ Presented insights through a well-documented Jupyter Notebook report combining code, visuals, and narrative explanations
 
 
+✅ 2. Add a README.md file to your repository
+Your README.md should include:
 
+Project title and short description
+
+Objectives of the project
+
+List of tools and libraries used
+
+How to run/view the project
+
+Any insights or reflections
+
+
+
+✅ 3. Check that your notebook runs from start to finish
+Please ensure that your notebook runs without errors and displays all outputs.
 
 
 Submission
