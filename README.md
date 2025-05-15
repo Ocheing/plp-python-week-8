@@ -1,233 +1,106 @@
 # plp-python-week-8
-📝 Project Title: COVID-19 Global Data Tracker
-Project Description:
+# 🌍 COVID-19 Global Data Tracker
 
-In this project, learners will build a data analysis and reporting notebook (or app) that tracks global COVID-19 trends. The project will analyze cases, deaths, recoveries, and vaccinations across countries and time. Learners will clean and process real-world data, perform exploratory data analysis (EDA), generate insights, and visualize trends using Python data tools.
+A data analysis project that explores the trends and impact of COVID-19 in selected countries using data from [Our World in Data](https://ourworldindata.org/coronavirus). The project focuses on cases, deaths, and vaccination efforts in Kenya, the United States, and India.
 
-By the end, they’ll have a data analysis report with visuals and narrative insights, suitable for presentation or publishing.
+---
 
-🚩 Project Objectives:
+## 🎯 Objectives
 
-✅ Import and clean COVID-19 global data
-✅ Analyze time trends (cases, deaths, vaccinations)
-✅ Compare metrics across countries/regions
-✅ Visualize trends with charts and maps
-✅ Communicate findings in a Jupyter Notebook or PDF report
+- Load and clean global COVID-19 data
+- Analyze total deaths, new cases, and vaccination trends over time
+- Compare data across Kenya, USA, and India
+- Visualize key indicators using line and bar charts
+- Communicate findings with code, visuals, and narrative
 
-🗂️ Project Segments (Step-by-Step Guide)
-1️⃣ Data Collection
+---
 
-Goal: Obtain a reliable COVID-19 dataset.
+## 🛠️ Tools & Libraries Used
 
-✅ Data Sources:
+- Python
+- Jupyter Notebook (or VS Code with Jupyter extension)
+- pandas
+- matplotlib
+- seaborn
 
-Our World in Data COVID-19 Dataset (CSV & API)
+---
 
-Johns Hopkins University GitHub Repository
+## 🚀 How to Run the Notebook
 
-👉 Recommended for beginners: Use the cleaned CSV from Our World in Data (easy to load with pandas).
+1. Clone or download the repository.
+2. Open the `.ipynb` notebook in **Jupyter** or **VS Code** with the Jupyter extension.
+3. Run each cell from top to bottom.
+4. Ensure you have the required libraries installed:
 
-✅ Action:
+```bash
+pip install pandas matplotlib seaborn
 
-Download owid-covid-data.csv from the above link.
+📊 Key Insights
+🇮🇳 India saw a rapid increase in vaccinations post-2021.
 
-Save in your working folder.
+🇺🇸 USA maintained high total case counts, reflecting extensive testing and population size.
 
+🇰🇪 Kenya had a slower vaccination rollout but consistent progress.
 
-2️⃣ Data Loading & Exploration
+Death rates declined as vaccinations increased across all three countries.
 
-Goal: Load the dataset and explore its structure.
+📤 Exporting Results
+You can export the notebook to:
 
-✅ Tasks:
+📄 PDF: via VS Code or Jupyter Lab.
 
-Load data using pandas.read_csv().
+📸 PowerPoint: by taking screenshots of charts and pasting into slides (optional).
 
-Check columns: df.columns.
+📌 Stretch Goals (Optional)
+Add a Streamlit dashboard version for interactive exploration
 
-Preview rows: df.head().
+Allow users to filter by country or date
 
-Identify missing values: df.isnull().sum().
+Include hospitalization or ICU metrics if available
 
-✅ Tools:
+📁 Dataset
+Source: Our World in Data - COVID-19
 
-pandas
+Format: CSV
 
-📌 Key columns:
+yaml
 
-date, location, total_cases, total_deaths, new_cases, new_deaths, total_vaccinations, etc.
 
+---
 
-3️⃣ Data Cleaning
+## ✅ **How to Export Jupyter Notebook as PDF in VS Code**
 
-Goal: Prepare data for analysis.
+### Option 1: Using the Built-in Export (Best Option)
 
-✅ Tasks:
+1. Open your `.ipynb` notebook in VS Code.
+2. In the top right corner of the notebook, click the **"Export"** button (looks like a square with an arrow).
+3. Choose `PDF`.
+4. Wait for it to convert and save — you'll be prompted to download/save the PDF.
 
-Filter countries of interest (e.g., Kenya, USA, India).
+> 🔧 If it asks for a LaTeX installation (like `TeX Live`), and you don't have it, use Option 2 below.
 
-Drop rows with missing dates/critical values.
+---
 
-Convert date column to datetime: pd.to_datetime().
+### Option 2: Convert via Web Browser
 
-Handle missing numeric values with fillna() or interpolate().
+1. In VS Code, click `File > Export As > HTML`.
+2. Open the `.html` file in a browser.
+3. Press `Ctrl + P` (Print).
+4. In the **Destination** dropdown, select **"Save as PDF"**.
+5. Click **Save**.
 
-✅ Tools:
+---
 
-pandas
+Let me know if you’d like the notebook template too — I can generate one for you right away.
 
-4️⃣ Exploratory Data Analysis (EDA)
 
-Goal: Generate descriptive statistics & explore trends.
 
-✅ Tasks:
 
-Plot total cases over time for selected countries.
 
-Plot total deaths over time.
 
-Compare daily new cases between countries.
 
-Calculate the death rate: total_deaths / total_cases.
 
-✅ Visualizations:
 
-Line charts (cases & deaths over time).
 
-Bar charts (top countries by total cases).
 
-Heatmaps (optional for correlation analysis).
 
-✅ Tools:
-
-matplotlib
-
-seaborn
-
-5️⃣ Visualizing Vaccination Progress
-
-Goal: Analyze vaccination rollouts.
-
-✅ Tasks:
-
-Plot cumulative vaccinations over time for selected countries.
-
-Compare % vaccinated population.
-
-✅ Charts:
-
-Line charts.
-
-Optional: Pie charts for vaccinated vs. unvaccinated.
-
-✅ Tools:
-
-matplotlib
-
-seaborn
-
-6️⃣ Optional: Build a Choropleth Map
-
-Goal: Visualize cases or vaccination rates by country on a world map.
-
-✅ Tools:
-
-Plotly Express
-
-Or geopandas (advanced)
-
-✅ Tasks:
-
-Prepare a dataframe with iso_code, total_cases for the latest date.
-
-Plot a choropleth showing case density or vaccination rates.
-
-7️⃣ Insights & Reporting
-
-Goal: Summarize findings.
-
-✅ Tasks:
-
-Write 3-5 key insights from the data (e.g., "X country had the fastest vaccine rollout").
-
-Highlight anomalies or interesting patterns.
-
-Use markdown cells in Jupyter Notebook to write your narrative.
-
-✅ Deliverables:
-
-A well-documented Jupyter Notebook combining:
-
-Code
-
-Visualizations
-
-Narrative explanations
-
-Optional export: Notebook → PDF or a PowerPoint with screenshots.
-
-🛠️ Recommended Tools:
-
-✅ Jupyter Notebook (or VS Code with Jupyter extension)
-✅ pandas
-✅ matplotlib & seaborn
-✅ Optional: plotly, geopandas
-
-
-
-🌍 Helpful References:
-
-Kaggle Dataset - https://www.kaggle.com/datasets🎯 Optional Stretch Goals:
-
-⭐ Allow user input (choose country & date range)
-⭐ Build an interactive dashboard with Streamlit or Dash
-⭐ Include hospitalization or ICU data if available
-
-✅ Final Deliverable:
-
-A Jupyter Notebook data report that:
-
-Loads, cleans, analyzes, and visualizes COVID-19 data.
-
-Communicates insights with a clear narrative and visuals.
-
-It is easy to read, well-commented, and reproducible.
-
-
-
-Key Objectives You May Have Achieved:
-
-✅ Collected global COVID-19 data from Our World in Data
-✅ Loaded and explored the dataset using pandas
-✅ Cleaned and prepared the data by handling missing values and filtering relevant countries
-✅ Performed exploratory data analysis (EDA) to identify trends in cases, deaths, and vaccinations
-✅ Created visualizations (line charts, bar charts, heatmaps, optional choropleth maps) to illustrate key metrics
-✅ Calculated critical indicators such as death rates and vaccination coverage
-✅ Presented insights through a well-documented Jupyter Notebook report combining code, visuals, and narrative explanations
-
-
-✅ 2. Add a README.md file to your repository
-Your README.md should include:
-
-Project title and short description
-
-Objectives of the project
-
-List of tools and libraries used
-
-How to run/view the project
-
-Any insights or reflections
-
-
-
-✅ 3. Check that your notebook runs from start to finish
-Please ensure that your notebook runs without errors and displays all outputs.
-
-
-Submission
-
-Go to the assignment for this week and submit your project as an assignment.
-
-
-
-Happy Coding
