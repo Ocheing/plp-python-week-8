@@ -91,7 +91,7 @@ yaml
 
 ---
 
-Let me know if you’d like the notebook template too — I can generate one for you right away.
+
 
 
 
